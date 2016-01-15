@@ -23,22 +23,7 @@ composer create-project --prefer-dist frostealth/yii2-api-advanced my-api
 
 ## Preparing application
 
-After you install the application, you have to conduct the following steps to initialize
-the installed application. You only need to do these once for all.
-
-1. Execute the `init` command and select `dev` as environment.
-
-   ```
-   php /path/to/my-api/init --env=development
-   ```
-
-   Otherwise, in production execute `init` in non-interactive mode.
-
-   ```
-   php /path/to/my-api/init --env=production --overwrite=a
-   ```
-
-2. Create a new database and adjust the `components['db']` configuration in `common/config/main-local.php` accordingly.
+After you install the application, you have to copy the `.env.example` file to `.env` and fill-in their own values.
 
 DIRECTORY STRUCTURE
 -------------------
@@ -66,5 +51,4 @@ api
             models/          contains version-specific model classes
     web/                     contains the entry script
 vendor/                      contains dependent 3rd-party packages
-environments/                contains environment-based overrides
 ```

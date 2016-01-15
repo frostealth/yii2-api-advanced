@@ -2,9 +2,7 @@
 
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+    require(__DIR__ . '/params.php')
 );
 
 return [
@@ -31,7 +29,7 @@ return [
             'loginUrl' => null,
         ],
         'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'traceLevel' => env('LOG_TRACE_LEVEL', 0),
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
